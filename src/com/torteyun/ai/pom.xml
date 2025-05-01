@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.torteyun</groupId>
+    <artifactId>ai</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>TorteYun AI</name>
+    <description>人工智能系统</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jena.version>4.6.1</jena.version>
+        <drools.version>8.32.0.Final</drools.version>
+        <dl4j.version>1.0.0-M2</dl4j.version>
+        <nd4j.version>1.0.0-M2</nd4j.version>
+        <tribuo.version>4.3.0</tribuo.version>
+        <weka.version>3.9.6</weka.version>
+        <smile.version>2.6.0</smile.version>
+        <opennlp.version>2.1.0</opennlp.version>
+        <corenlp.version>4.5.1</corenlp.version>
+        <spark.version>3.3.1</spark.version>
+        <flink.version>1.16.0</flink.version>
+    </properties>
+
+        <!-- Apache Jena - 知识图谱 -->
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>apache-jena-libs</artifactId>
+            <version>${jena.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- Drools - 规则引擎 -->
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-core</artifactId>
+            <version>${drools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-compiler</artifactId>
+            <version>${drools.version}</version>
+        </dependency>
+
+        <!-- Apache Commons Math - 数学库 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+        <!-- Tribuo - 机器学习库 -->
+        <dependency>
+            <groupId>org.tribuo</groupId>
+            <artifactId>tribuo-all</artifactId>
+            <version>${tribuo.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- Weka - 机器学习库 -->
+        <dependency>
+            <groupId>nz.ac.waikato.cms.weka</groupId>
+            <artifactId>weka-stable</artifactId>
+            <version>${weka.version}</version>
+        </dependency>
+
+        <!-- Smile - 统计和机器学习库 -->
+        <dependency>
+            <groupId>com.github.haifengl</groupId>
+            <artifactId>smile-core</artifactId>
+            <version>${smile.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.haifengl</groupId>
+            <artifactId>smile-nlp</artifactId>
+            <version>${smile.version}</version>
+        </dependency>
+
+        <!-- Deeplearning4j - 深度学习库 -->
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>${nd4j.version}</version>
+        </dependency>
+
+        <!-- OpenNLP - 自然语言处理 -->
+        <dependency>
+            <groupId>org.apache.opennlp</groupId>
+            <artifactId>opennlp-tools</artifactId>
+            <version>${opennlp.version}</version>
+        </dependency>
+
+        <!-- Stanford CoreNLP - 自然语言处理 -->
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>${corenlp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>${corenlp.version}</version>
+            <classifier>models</classifier>
+        </dependency>
+
+        <!-- Transformers - 通过JNI或API调用 -->
+        <dependency>
+            <groupId>ai.djl.huggingface</groupId>
+            <artifactId>tokenizers</artifactId>
+            <version>0.19.0</version>
+        </dependency>
+
+        <!-- Rasa - 通过HTTP API调用 -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.10.0</version>
+        </dependency>
+
+        <!-- Apache Spark -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.12</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.12</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-mllib_2.12</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <!-- Apache Flink -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-clients</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
